@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#5a1727">
+  <meta name="description" content="The wedding celebration of Subin Jo Varghese and Amala Ann Scaria — 31 December 2026.">
+  <title>Subin & Amala — The Wedding</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500;6..96,600&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Allura&family=Great+Vibes&family=Manrope:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain"></div>
+  <div class="music-control" id="musicControl">
+    <button id="musicToggle" aria-label="Play wedding music"><span class="music-bars"><i></i><i></i><i></i><i></i></span></button>
+    <audio id="weddingAudio" loop preload="auto"><source src="assets/wedding-song.mp3" type="audio/mpeg"></audio>
+  </div>
+
+  <section class="envelope-screen" id="envelopeScreen" aria-label="Open invitation">
+    <div class="opening-paper-grain" aria-hidden="true"></div>
+    <div class="envelope-wrap" id="envelopeWrap" role="button" tabindex="0" aria-label="Open the wedding invitation">
+      <div class="envelope-shadow"></div>
+      <div class="opening-letterhead">
+        <p class="opening-kicker">A NEW CHAPTER BEGINS</p>
+        
+        <p class="opening-date">31 · 12 · 2026</p>
+      </div>
+      
+      <div class="envelope">
+        <div class="envelope-back"></div>
+        <div class="letter" aria-hidden="true"></div>
+        <div class="envelope-front"></div>
+        <div class="envelope-flap"></div>
+        <div class="wax-seal"><span class="seal-monogram">S <i>&</i> A</span></div>
+      </div>
+      <p class="open-prompt">CLICK TO OPEN</p>
+    </div>
+    <div class="intro-bottom">A WEDDING INVITATION <span>✧</span> KERALA, INDIA</div>
+  </section>
+
+  <main id="mainSite" class="site hidden">
+    <header class="hero" id="home">
+      <div class="hero-image"></div>
+      <div class="hero-shade"></div>
+      <nav class="wedding-dashboard" aria-label="Wedding sections">
+        <a class="dashboard-mark" href="#home">S <i>&</i> A</a>
+        <div class="dashboard-links">
+          <a href="#invitation">THE INVITATION</a>
+          <a href="#countdownSection">COUNTDOWN</a>
+          <a href="#venue">THE VENUE</a>
+          <a href="#gallerySection">GALLERY</a>
+          <a href="#rsvp">REPLY</a>
+        </div>
+        <a class="dashboard-date" href="#rsvp">31 · 12 · 26</a>
+      </nav>
+      <div class="hero-top"><span>WITH JOY & GRATITUDE</span><span>31 DECEMBER 2026</span></div>
+      <div class="hero-content">
+        <p class="eyebrow light">TOGETHER WITH OUR FAMILIES</p>
+        <h1><span class="script">Subin</span><span class="ampersand">&</span><span class="script">Amala</span></h1>
+        <p class="hero-weds">ARE GETTING MARRIED</p>
+        <p class="hero-fullnames">Subin Jo Varghese &nbsp; · &nbsp; Amala Ann Scaria</p>
+        <div class="ornament"><span></span> ✧ <span></span></div>
+        <p class="hero-date">THURSDAY · 31 DECEMBER 2026</p>
+        <a class="scroll-cue" href="#invitation">SCROLL TO EXPLORE <span>↓</span></a>
+      </div>
+      <div class="hero-caption">A DAY TO REMEMBER · A PROMISE FOREVER</div>
+    </header>
+
+    <section class="invitation paper-section reveal" id="invitation">
+      <div class="section-kicker">THE HONOUR OF YOUR PRESENCE</div>
+      <div class="tiny-flower">❀</div>
+      <p class="invitation-copy">Together with our beloved parents,<br>we invite you to share in the joy<br>of our wedding celebration.</p>
+      <div class="family-grid">
+        <div><p class="family-label">GROOM'S PARENTS</p><p>Mr. Sunnymon VJ<br><span>&</span><br>Mrs. Bobina Sunny</p></div>
+        <div class="family-divider">✧</div>
+        <div><p class="family-label">BRIDE'S PARENTS</p><p>Mr. Scaria Thekkeyil Abraham<br><span>&</span><br>Mrs. Annie Thomas</p></div>
+      </div>
+      <div class="event-details">
+        <div><span class="detail-label">THE WEDDING CEREMONY</span><strong>10:45 <small>AM</small></strong></div>
+        <div class="detail-line"></div>
+        <div><span class="detail-label">THE RECEPTION</span><strong>12:30 <small>PM</small></strong></div>
+      </div>
+    </section>
+
+    <section class="countdown-section" id="countdownSection">
+      <div class="countdown-bg"></div>
+      <div class="rose-petal-layer" id="rosePetals" aria-hidden="true"></div>
+      <div class="countdown-inner reveal">
+        <p class="eyebrow light">THE MOMENT IS GETTING CLOSER</p>
+        <h2 class="section-title light-title">Until we say <em>I do</em></h2>
+        <div class="scratch-frame" id="scratchFrame">
+          <canvas id="scratchCanvas" aria-label="Swipe once to reveal the wedding countdown"></canvas>
+          <div class="countdown revealed-countdown" id="countdown" aria-label="Live wedding countdown">
+          <div><strong id="days">--</strong><span>DAYS</span></div>
+          <i>:</i><div><strong id="hours">--</strong><span>HOURS</span></div>
+          <i>:</i><div><strong id="minutes">--</strong><span>MINUTES</span></div>
+          <i>:</i><div><strong id="seconds">--</strong><span>SECONDS</span></div>
+          </div>
+        </div>
+        <p class="countdown-note">Edathua, Alappuzha, Kerala, India</p>
+      </div>
+    </section>
+
+    <section class="venue-section paper-section reveal" id="venue">
+      <div class="section-kicker">WHERE WE BECOME ONE</div>
+      <h2 class="section-title">The place, the promise</h2>
+      <div class="venue-layout">
+        <div class="venue-photo-wrap">
+          <div class="torn-edge"></div>
+          <img src="assets/venue.png" alt="St. George Forane Church, Edathua" class="venue-photo">
+          
+          <span class="photo-caption">A sacred beginning</span>
+        </div>
+        <div class="venue-copy">
+          <p class="eyebrow">THE WEDDING CEREMONY</p>
+          <h3>St. George Forane Church</h3>
+          <p class="venue-place">Edathua, Alappuzha, Kerala, India</p>
+          <p class="venue-time">31 December 2026 <span>·</span> 10:45 AM</p>
+          <a class="outline-button" href="https://maps.app.goo.gl/DeN7bnnzeXBN1WhV7?g_st=aw" target="_blank" rel="noopener">GET DIRECTIONS <span>↗</span></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section" id="gallerySection">
+      <div class="gallery-heading reveal">
+        <p class="section-kicker">A FEW FAVOURITE FRAMES</p>
+        <h2 class="section-title">Our little gallery</h2>
+        <p>Moments we can't wait to celebrate with you.</p>
+      </div>
+      <div class="gallery-grid" id="gallery">
+        <figure class="gallery-item tall reveal"><img src="assets/gallery-01.jpg" alt="Subin and Amala photograph 1"><figcaption>01</figcaption><div class="gallery-placeholder">PHOTO 01</div></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery-02.jpg" alt="Subin and Amala photograph 2"><figcaption>02</figcaption><div class="gallery-placeholder">PHOTO 02</div></figure>
+        <figure class="gallery-item wide reveal"><img src="assets/gallery-03.jpg" alt="Subin and Amala photograph 3"><figcaption>03</figcaption><div class="gallery-placeholder">PHOTO 03</div></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery-04.jpg" alt="Subin and Amala photograph 4"><figcaption>04</figcaption><div class="gallery-placeholder">PHOTO 04</div></figure>
+        <figure class="gallery-item tall reveal"><img src="assets/gallery-05.jpg" alt="Subin and Amala photograph 5"><figcaption>05</figcaption><div class="gallery-placeholder">PHOTO 05</div></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery-06.jpg" alt="Subin and Amala photograph 6"><figcaption>06</figcaption><div class="gallery-placeholder">PHOTO 06</div></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery-07.jpg" alt="Subin and Amala photograph 7"><figcaption>07</figcaption><div class="gallery-placeholder">PHOTO 07</div></figure>
+        <figure class="gallery-item wide reveal"><img src="assets/gallery-08.jpg" alt="Subin and Amala photograph 8"><figcaption>08</figcaption><div class="gallery-placeholder">PHOTO 08</div></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery-09.jpg" alt="Subin and Amala photograph 9"><figcaption>09</figcaption><div class="gallery-placeholder">PHOTO 09</div></figure>
+        <figure class="gallery-item reveal"><img src="assets/gallery-10.jpg" alt="Subin and Amala photograph 10"><figcaption>10</figcaption><div class="gallery-placeholder">PHOTO 10</div></figure>
+      </div>
+    </section>
+
+    <section class="rsvp-section paper-section reveal" id="rsvp">
+      <div class="section-kicker">KINDLY REPLY</div>
+      <div class="tiny-flower">✿</div>
+      <h2 class="section-title">Will you join us?</h2>
+      <p class="rsvp-intro">Your presence would make our day even more special.<br>Please let us know if you can celebrate with us.</p>
+      <form class="rsvp-form" name="wedding-reply" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="wedding-reply">
+        <p class="hidden"><label>Don't fill this out: <input name="bot-field"></label></p>
+        <label for="guestName">YOUR NAME</label>
+        <input id="guestName" name="guest-name" type="text" placeholder="Your full name" required>
+        <label for="guestCount">NUMBER OF GUESTS</label>
+        <select id="guestCount" name="guest-count" required>
+          <option value="1">1 guest</option><option value="2">2 guests</option><option value="3">3 guests</option><option value="4">4 guests</option><option value="5+">5 or more</option>
+        </select>
+        <label for="guestMessage">A LITTLE NOTE (OPTIONAL)</label>
+        <textarea id="guestMessage" name="message" rows="3" placeholder="Leave us a message..."></textarea>
+        <button class="send-button" type="submit">SEND REPLY <span>→</span></button>
+      </form>
+      <p class="rsvp-footnote">Kindly reply at your earliest convenience.</p>
+    </section>
+
+
+    <section class="rings-interlude reveal" aria-label="Together forever">
+      
+      <div class="crossing-rings" aria-label="Subin and Amala's wedding rings">
+        <img class="ring-image ring-image-left" src="assets/ring-subin.png" alt="Subin's gold wedding ring">
+        <img class="ring-image ring-image-right" src="assets/ring-amala.png" alt="Amala's gold wedding ring">
+      </div>
+      <p class="rings-subtitle">A promise to hold, a love to keep</p>
+    </section>
+    <footer class="closing">
+      <div class="butterflies" aria-hidden="true"><span>🦋</span><span>🦋</span><span>🦋</span></div>
+      <div class="closing-flower">❀</div>
+      <p class="eyebrow light">WITH LOVE, ALWAYS</p>
+      <h2 class="closing-names"><span class="script">Subin</span><span class="closing-amp">&</span><span class="script">Amala</span></h2>
+      <p class="closing-date">31 · 12 · 2026</p>
+      <div class="closing-rule"></div>
+      <p class="closing-thanks">WE CAN'T WAIT TO CELEBRATE WITH YOU</p>
+      <p class="closing-compliments">BEST COMPLIMENTS FROM<br><span class="compliment-names"><span class="script">Sona Anna Varghese</span><span class="compliment-amp">&amp;</span><span class="script">Arun Ann Scaria</span></span></p>
+      <p class="copyright">MADE WITH LOVE · KERALA, INDIA</p>
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
